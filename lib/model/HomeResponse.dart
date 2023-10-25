@@ -28,7 +28,7 @@ class HomeResponse {
     if (json['items'] != null) {
       items = <Items>[];
       json['items'].forEach((v) {
-        items!.add(new Items.fromJson(v));
+        items!.add(Items.fromJson(v));
       });
     }
     itemCount = json['item_count'];
@@ -38,18 +38,18 @@ class HomeResponse {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['created_by'] = this.createdBy;
-    data['description'] = this.description;
-    data['favorite_count'] = this.favoriteCount;
-    data['id'] = this.id;
-    if (this.items != null) {
-      data['items'] = this.items!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['created_by'] = createdBy;
+    data['description'] = description;
+    data['favorite_count'] = favoriteCount;
+    data['id'] = id;
+    if (items != null) {
+      data['items'] = items!.map((v) => v.toJson()).toList();
     }
-    data['item_count'] = this.itemCount;
-    data['iso_639_1'] = this.iso6391;
-    data['name'] = this.name;
-    data['poster_path'] = this.posterPath;
+    data['item_count'] = itemCount;
+    data['iso_639_1'] = iso6391;
+    data['name'] = name;
+    data['poster_path'] = posterPath;
     return data;
   }
 }
@@ -107,22 +107,22 @@ class Items {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['adult'] = this.adult;
-    data['backdrop_path'] = this.backdropPath;
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['original_language'] = this.originalLanguage;
-    data['original_title'] = this.originalTitle;
-    data['overview'] = this.overview;
-    data['poster_path'] = this.posterPath;
-    data['media_type'] = this.mediaType;
-    data['genre_ids'] = this.genreIds;
-    data['popularity'] = this.popularity;
-    data['release_date'] = this.releaseDate;
-    data['video'] = this.video;
-    data['vote_average'] = this.voteAverage;
-    data['vote_count'] = this.voteCount;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['adult'] = adult;
+    data['backdrop_path'] = backdropPath;
+    data['id'] = id;
+    data['title'] = title;
+    data['original_language'] = originalLanguage;
+    data['original_title'] = originalTitle;
+    data['overview'] = overview;
+    data['poster_path'] = posterPath;
+    data['media_type'] = mediaType;
+    data['genre_ids'] = genreIds;
+    data['popularity'] = popularity;
+    data['release_date'] = releaseDate;
+    data['video'] = video;
+    data['vote_average'] = voteAverage;
+    data['vote_count'] = voteCount;
     return data;
   }
 }

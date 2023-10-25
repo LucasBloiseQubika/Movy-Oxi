@@ -175,7 +175,7 @@ class _SelectionWidgetState extends State<SelectionWidget> {
   @override
   Widget build(BuildContext context) {
   final ThemeData theme = Theme.of(context);
-    return Container(
+    return SizedBox(
       width: 101,
       height: 113,
       child: GestureDetector(

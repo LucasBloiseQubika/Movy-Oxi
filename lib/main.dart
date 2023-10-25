@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homeScreen/HomeSreen.dart';
-import 'package:flutter_application_1/screens/planSelection/planSelectionScreenRoute.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/HomePageBloc.dart';
-import 'repository/HomePageRepository.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,7 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: myTheme,
-      home: const Scaffold(
+      home: Scaffold(
           body: SafeArea(
             child: HomeScreen(),
           ),

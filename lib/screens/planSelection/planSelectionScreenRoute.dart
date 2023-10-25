@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/planSelection/planOptionsRoute.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../bloc/HomePageBloc.dart';
 import 'planSelectionCommon.dart';
 
 
@@ -10,7 +8,7 @@ class PlanSelectionScreenRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Content(),
     );
   }
@@ -25,19 +23,19 @@ class Content extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 28,
         ),
-        PlanSelectionHeader(),
-        SizedBox(
+        const PlanSelectionHeader(),
+        const SizedBox(
           height: 89,
         ),
-        MainContentWidget(),
-        SizedBox(
+        const MainContentWidget(),
+        const SizedBox(
           height: 34,
         ),
-        CheckRowListWidget(),
-        Spacer(),
+        const CheckRowListWidget(),
+        const Spacer(),
         BottomButtonWidget(
         txt: "VER LOS PLANES",
         onTap: () {
@@ -46,7 +44,7 @@ class Content extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const PlansScreenRoute()),
               );
         }),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
       ],
@@ -129,7 +127,7 @@ class CheckRowWidget extends StatelessWidget {
         ),
         Flexible(
             child: Text(mText,
-                style: TextStyle(fontSize: 17, fontFamily: '.SF UI Text')))
+                style: const TextStyle(fontSize: 17, fontFamily: '.SF UI Text')))
       ],
     );
   }

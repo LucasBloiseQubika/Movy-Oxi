@@ -9,11 +9,11 @@ class PlanSelectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 27),
+      padding: const EdgeInsets.symmetric(horizontal: 27),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image(image: AssetImage('images/BlueLogo.png')),
+          const Image(image: AssetImage('images/BlueLogo.png')),
           Text(
             "Iniciar Session",
             style: TextStyle(
@@ -49,7 +49,7 @@ class BottomButtonWidget extends StatelessWidget {
           onPressed: () {
             onTap?.call();
           },
-          child:  Text(txt, style: TextStyle(color: Colors.white),)),
+          child:  Text(txt, style: const TextStyle(color: Colors.white),)),
     );
   }
 }

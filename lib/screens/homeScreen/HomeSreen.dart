@@ -20,9 +20,9 @@ class HomeScreen extends StatelessWidget {
           builder: (context, state) {
             if (state is HomepageSuccess) {
               List<Items> items =
-                  (state as HomepageSuccess).homePageResponse.items!;
+                  (state).homePageResponse.items!;
               return ListView.builder(
-                itemCount: items!.length,
+                itemCount: items.length,
                 itemBuilder: (BuildContext context, int index) {
 
                   String currentItem = items[index].posterPath!;
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               );
             } else {
               return GestureDetector(
-                child: Text("PEPE"),
+                child: const Text("PEPE"),
                 onTap: () {
                   homeCubit.getData();
                 },

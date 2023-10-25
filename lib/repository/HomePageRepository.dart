@@ -1,10 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_application_1/api/ApiService.dart';
-import 'package:http/http.dart';
 
-import '../model/HomePageModel.dart';
-import 'package:http/http.dart' as http;
 
 import '../model/HomeResponse.dart';
 
