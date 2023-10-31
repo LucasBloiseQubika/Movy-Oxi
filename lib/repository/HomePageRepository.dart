@@ -15,12 +15,14 @@ class HomePageRepo extends HomePageRepository {
   Future<HomeResponse> fetchDetails() async {
     HomeResponse result = HomeResponse();
 
-    await ApiService.getService("3/list/1", (onSuccessResponse) {
-      result = HomeResponse.fromJson(json.decode(onSuccessResponse.body));
+    await ApiService.getService("3/list/1", 
+    (onSuccessResponse) {
+      result = HomeResponse.fromJson(json.decode(onSuccessResponse.response.body));
     }, (onErrorResponse) {
-      onErrorResponse.body;
+        throw ApiErrorException(onErrorResponse.response.body);
     });
 
     return result;
   }
 }
+
