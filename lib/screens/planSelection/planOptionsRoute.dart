@@ -31,6 +31,7 @@ class PlansScreenRoute extends StatelessWidget {
                   widget1: Text("US 8,99"),
                   widget2: Text("US 8,99"),
                   widget3: Text("US 8,99"),
+                  spacer: "|",
                 )),
             SizedBox(height: 25),
             AvailableFeature(featureText: "HD disponible"),
@@ -86,6 +87,8 @@ final String featureText;
           widget1: Image(image: AssetImage('images/check.png')),
           widget2: Image(image: AssetImage('images/check.png')),
           widget3: Image(image: AssetImage('images/check.png')),
+          spacer: "|",
+
         )),
     ],);
   }
@@ -109,11 +112,13 @@ class TiersWidget extends StatelessWidget {
   final Widget widget1;
   final Widget widget2;
   final Widget widget3;
+  final String spacer;
 
   const TiersWidget({
     required this.widget1,
     required this.widget2,
     required this.widget3,
+    required this.spacer,
     super.key,
   });
 
@@ -123,11 +128,11 @@ class TiersWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         widget1,
-        const Text("|",
+         Text(spacer,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18, fontFamily: '.SF UI Text')),
         widget2,
-        const Text("|",
+         Text(spacer,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18, fontFamily: '.SF UI Text')),
         widget3
